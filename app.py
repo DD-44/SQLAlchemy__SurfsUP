@@ -70,8 +70,7 @@ def precipitation():
     all_prcp = []
     for result in results:
         prcp_dict = {}
-        prcp_dict["date"] = result[0]
-        prcp_dict["prcp"] = result[1]
+        prcp_dict[result[0]] = result[1]
 
         all_prcp.append(prcp_dict)
 
@@ -98,8 +97,7 @@ def tobs():
     tobs_list=[]
     for tobs in results:
         tobs_dict = {}
-        tobs_dict["station"] = tobs[0]
-        tobs_dict["tobs"] = float(tobs[1])
+        tobs_dict[tobs[0]] = float(tobs[1])
         tobs_list.append(tobs_dict)
     return jsonify(tobs_list)
 
