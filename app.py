@@ -11,7 +11,7 @@ from pprint import pprint
 
 
 # Create an engine for the hawaii.sqlite database
-engine = create_engine("sqlite:///Resources/hawaii.sqlite?check_same_tread=False")
+engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
 
 # reflect an existing database into a new model
