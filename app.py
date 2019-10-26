@@ -65,7 +65,7 @@ def precipitation():
     results = session.query(Measurement.date, Measurement.prcp).\
         filter(Measurement.date <= '2017-08-23').\
         filter(Measurement.date >= '2016-08-24').all()
-
+    session.close()
     # Convert the query results into a dictionary using date as the key and precipitation as the value
     all_prcp = []
     for result in results:
